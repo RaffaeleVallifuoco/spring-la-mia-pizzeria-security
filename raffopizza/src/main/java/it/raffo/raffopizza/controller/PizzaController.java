@@ -137,7 +137,7 @@ public class PizzaController {
 
         Pizza pizza = pizzaRepo.findById(id).get();
         Sale sale = new Sale();
-        sale.setPizzaSale(pizza);
+        sale.setPizza(pizza);
 
         model.addAttribute("sale", sale);
 

@@ -21,6 +21,7 @@ public class DatabaseUserDetailsService implements UserDetailsService {
         Optional<User> user = userRepository.findByUsername(username);
 
         if (user.isPresent()) {
+            System.out.println(user.get().getUsername());
             return new DatabaseUserDetails(user.get());
         } else {
             throw new UsernameNotFoundException("Utente non trovato");

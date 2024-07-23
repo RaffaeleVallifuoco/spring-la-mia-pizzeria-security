@@ -36,8 +36,8 @@ public class SecurityConfiguration {
             throws Exception {
         http.authorizeHttpRequests()
                 // .requestMatchers("/").hasAuthority("USER")
-                .requestMatchers("/").hasAuthority("ADMIN")
-                // .requestMatchers("/").permitAll()
+                .requestMatchers("/**").hasAuthority("ADMIN")
+                // .requestMatchers("/** */").permitAll()
                 .and()
                 .formLogin()
                 .and()
